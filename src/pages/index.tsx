@@ -1,11 +1,14 @@
-import Navbar from '@/components/navbar/navbar'
+import Layout from '@/components/layout/layout';
 import HomeSection from '../components/home/homeSection';
+import CoursesSection from './../components/coursesSection/coursesSection';
 
 export default function Home() {
   return (
     <>
-      <Navbar/>
-      <HomeSection/>
+      <Layout>
+        <HomeSection/>
+        <CoursesSection/>
+      </Layout>
     </>
   )
 }

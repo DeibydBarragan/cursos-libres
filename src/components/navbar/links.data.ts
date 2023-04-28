@@ -9,6 +9,10 @@ export const ROUTES: Route[] = [
     name: 'Cursos'
   },
   {
+    path: 'agregar-curso',
+    name: 'Agrega un curso'
+  },
+  {
     path: 'informacion-bienestar',
     name: 'Información de bienestar'
   },
