@@ -1,7 +1,7 @@
 import { coursesContext } from "@/components/context/coursesContext"
 import { Course } from "@/components/context/interfaces";
 import Layout from "@/components/layout/layout"
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react"
+import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import { useContext, useState, useEffect } from 'react';
 
@@ -26,10 +26,9 @@ export default function CourseView ({}: Props) {
     <Layout>
       <Box
         as="section"
-        h="70vh"
-        w={{ base: "90%", lg: "60%", '2xl': "40%" }}
+        w={{ base: "90%", lg: "60%", '2xl': "45%" }}
         mx="auto"
-        my={10}
+        my={{ base: 5, md: 10 }}
       >
         {course && (
           <Flex
@@ -37,20 +36,26 @@ export default function CourseView ({}: Props) {
             gap={5}
           >
             <Heading
-
               as="h2"
               color="green.800"
             >
               {course.name}
             </Heading>
+            {/**
+             * To do: fix it
+             */}
             <Flex
-              h={64}
+              height={{ base: "auto", md: "40vh" }}
               gap={8}
+              flexDir={{
+                base: "column",
+                md: "row"
+              }}
             >
               <Flex
-                w="full"
-                h="full"
                 justifyContent="center"
+                w={{ base: "full", md: "60%" }}
+                maxH="35vh"
               >
                 <Image
                   src={course.image}
@@ -63,8 +68,6 @@ export default function CourseView ({}: Props) {
               </Flex>
               <Flex
                 flexDir='column'
-                w='full'
-                h='full'
               >
                 {/**Register date */}
                 <Text
@@ -112,6 +115,13 @@ export default function CourseView ({}: Props) {
                 >
                   {course.endDate}
                 </Text>
+                {/**Inscription button */}
+                <Button
+                  colorScheme='green'
+                  mt={5}
+                >
+                  Inscribirse al curso
+                </Button>
               </Flex>
             </Flex>
             {/**Description */}
@@ -129,6 +139,9 @@ export default function CourseView ({}: Props) {
                 fontSize='lg'
               >
                 {course.description}
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facere temporibus perspiciatis perferendis illum consectetur minus modi odit, quia enim ut sapiente fugiat ratione minima aliquam impedit quidem veritatis obcaecati.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, id quae quibusdam, aperiam quia praesentium animi dolorum ut vitae expedita, perspiciatis delectus modi! Tenetur error ratione delectus rem blanditiis incidunt?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati enim eos harum, laborum architecto ipsa minima voluptatem velit optio expedita itaque a ad dolores sequi neque, corporis accusantium totam unde!
               </Text>
             </Box>
           </Flex>

@@ -1,5 +1,6 @@
 import { Flex, VStack } from "@chakra-ui/react"
 import Navbar from "../navbar/navbar"
+import Footer from "../footer/footer"
 
 type Props = {
   children: React.ReactNode
