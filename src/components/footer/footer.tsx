@@ -9,7 +9,6 @@ export default function Footer() {
       h={20}
       mt={10}
     >
-      hola
     </Box>
   )
 }

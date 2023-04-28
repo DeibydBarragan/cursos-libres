@@ -1,6 +1,7 @@
 import { Box, Drawer, DrawerCloseButton, DrawerContent, DrawerOverlay, Flex, IconButton, Image, Link, useBoolean } from '@chakra-ui/react'
 import { ROUTES } from './links.data'
 import { BiMenu } from 'react-icons/bi'
+import NavLink from './navLink'
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useBoolean(false)
@@ -10,11 +11,11 @@ export default function Navbar() {
       as="nav"
       display="flex"
       bg="white"
-      boxShadow="xl"
+      boxShadow="lg"
       height={20}
       position={"sticky"}
       top={0}
-      zIndex={1}
+      zIndex={10}
       width="full"
     >
       <Flex
@@ -22,10 +23,12 @@ export default function Navbar() {
         height="full"
         w="full"
         gap={10}
-        px={{ base: 5, lg: 20}}
+        px={{ base: 5, xl: 20}}
         justifyContent={{ base: "space-between", lg: "flex-start" }}
       >
-        <Link>
+        <Link
+          href='/'
+        >
           <Image
             src="/logo.png"
             alt="Logo"
@@ -41,17 +44,24 @@ export default function Navbar() {
         >
           {
             ROUTES.map((route, index) => (
-              <Link
+              <NavLink
                 key={index}
-                color="gray.500"
-                _hover={{
-                  color: "green.700",
-                  textDecoration: "none"
-                }}
+                to={route.path}
               >
                 {route.name}
-              </Link>
+              </NavLink>
           ))}
+          <Link
+            href='/agregar-curso'
+            color="gray.500"
+            fontSize="md"
+            _hover={{
+              color: "green.700",
+              textDecoration: "none"
+            }}
+          >
+            Agrega un curso
+          </Link>
         </Box>
         <IconButton
           display={{base: "flex", lg: "none"}}
@@ -83,17 +93,12 @@ export default function Navbar() {
             />
             {
               ROUTES.map((route, index) => (
-                <Link
-                  key={index}
-                  color="gray.600"
-                  fontSize="xl"
-                  _hover={{
-                    color: "green.700",
-                    textDecoration: "none"
-                  }}
+                <NavLink
+                key={index}
+                to={route.path}
                 >
                   {route.name}
-                </Link>
+                </NavLink>
             ))}
           </DrawerContent>
         </Drawer>

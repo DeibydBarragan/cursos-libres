@@ -17,6 +17,7 @@ export default function Layout({children}: Props) {
         {/* Main Content */}
         <Flex flexDir="column" width="full">
           {children}
+          <Footer/>
         </Flex>
       </VStack>
     </>

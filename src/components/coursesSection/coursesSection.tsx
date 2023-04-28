@@ -9,7 +9,8 @@ export default function CoursesSection() {
   return (
     <Box
       as="section"
-      h="90vh"
+      id="courses"
+      minH="90vh"
       w={{ base: "90%", lg: "80%", '2xl': "60%" }}
       mx="auto"
       my={10}

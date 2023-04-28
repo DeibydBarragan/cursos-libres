@@ -1,9 +1,11 @@
+import NavLink from '@/components/navbar/navLink'
 import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react'
 
 export default function HomeSection () {
   return (
     <Box
       as="section"
+      id="home"
       h="90vh"
       position="relative"
       backgroundColor="black"
@@ -45,18 +47,26 @@ export default function HomeSection () {
         <Flex
           gap={5}
         >
-          <Button
-            colorScheme="green"
-            shadow="md"
+          <NavLink
+            to='courses'
           >
-            Ver cursos
-          </Button>
-          <Button
-            colorScheme="green"
-            shadow="md"
+            <Button
+              colorScheme="green"
+              shadow="md"
+            >
+              Ver cursos
+            </Button>
+          </NavLink>
+          <NavLink
+            to='inscription'
           >
-            Inscribirse a un curso
-          </Button>
+            <Button
+              colorScheme="green"
+              shadow="md"
+            >
+              Inscribirse a un curso
+            </Button>
+          </NavLink>
         </Flex>
       </Flex>
     </Box>
