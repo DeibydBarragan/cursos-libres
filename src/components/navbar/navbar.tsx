@@ -103,6 +103,17 @@ export default function Navbar() {
                   {route.name}
                 </NavLink>
             ))}
+            <Link
+              href='/agregar-curso'
+              color="gray.500"
+              fontSize="md"
+              _hover={{
+                color: "green.700",
+                textDecoration: "none"
+              }}
+            >
+              Agrega un curso
+            </Link>
           </DrawerContent>
         </Drawer>
       </Flex>
