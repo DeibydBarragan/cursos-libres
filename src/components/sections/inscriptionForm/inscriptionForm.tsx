@@ -18,8 +18,8 @@ export default function InscriptionForm({}: Props) {
       w={{ base: "90%", lg: "40%", '2xl': "30%" }}
       mx="auto"
       my={{ base:10, lg:16 }}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
     >
       <FormControl
         display="flex"
