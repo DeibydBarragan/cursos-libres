@@ -3,6 +3,7 @@ import { Box, Button, Flex, FormControl, FormLabel, Heading, Input, InputGroup, 
 import { useContext } from "react"
 import { FaSchool } from "react-icons/fa"
 import { FiAtSign } from "react-icons/fi"
+import { motion } from 'framer-motion'
 
 type Props = {}
 
@@ -11,15 +12,14 @@ export default function InscriptionForm({}: Props) {
 
   return (
     <Box
-      as="section"
+      as={motion.section}
       id="inscription"
       minH="90vh"
       w={{ base: "90%", lg: "40%", '2xl': "30%" }}
       mx="auto"
-      my={{
-        base:10,
-        lg:16
-      }}
+      my={{ base:10, lg:16 }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
     >
       <FormControl
         display="flex"

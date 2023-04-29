@@ -4,6 +4,7 @@ import Layout from "@/components/layout/layout"
 import { Button, Flex, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import { useContext, useState, useEffect } from 'react';
+import { motion } from "framer-motion";
 
 type Props = {}
 
@@ -25,23 +26,17 @@ export default function CourseView ({}: Props) {
   return (
     <Layout>
       <Grid
-        w={{
-          base: "90%",
-          lg: "70%"
-        }}
+        as={motion.section}
+        w={{ base: "90%", lg: "70%" }}
         mx="auto"
-        mt={{
-          base: 5,
-          lg: 10
-        }}
+        mt={{ base: 5, lg: 10 }}
         templateRows='repeat(3, min-content)'
         templateColumns='repeat(6, 1fr)'
         flexDir="column"
-        display={{
-          base: "flex",
-          md: "grid"
-        }}
+        display={{ base: "flex", md: "grid"}}
         gap={4}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
       >
         {/**Title */}
         <GridItem colSpan={4}>
@@ -69,9 +64,12 @@ export default function CourseView ({}: Props) {
           </Flex>
         </GridItem>
         {/**Dates */}
-        <GridItem  
+        <GridItem
+          as={motion.div}
           rowSpan={2}
-          colSpan={2} 
+          colSpan={2}
+          initial={{ y: -100 }}
+          animate={{ y: 0 }} 
         >
           {/**Register date */}
           <Text

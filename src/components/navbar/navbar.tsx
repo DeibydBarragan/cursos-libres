@@ -2,13 +2,14 @@ import { Box, Drawer, DrawerCloseButton, DrawerContent, DrawerOverlay, Flex, Ico
 import { ROUTES } from './links.data'
 import { BiMenu } from 'react-icons/bi'
 import NavLink from './navLink'
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useBoolean(false)
 
   return (
     <Box
-      as="nav"
+      as={motion.nav}
       display="flex"
       bg="white"
       boxShadow="lg"
@@ -17,6 +18,8 @@ export default function Navbar() {
       top={0}
       zIndex={10}
       width="full"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1}}
     >
       <Flex
         alignItems="center"

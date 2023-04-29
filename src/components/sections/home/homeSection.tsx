@@ -1,14 +1,17 @@
 import NavLink from '@/components/navbar/navLink'
 import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 
 export default function HomeSection () {
   return (
     <Box
-      as="section"
+      as={motion.section}
       id="home"
       h="90vh"
       position="relative"
       backgroundColor="black"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1}}
     >
       <Image
         src="/images/fondo.jpg"
@@ -20,12 +23,16 @@ export default function HomeSection () {
         brightness="50%"
       />
       <Flex
+        as={motion.div}
         position="absolute"
         top={{ base: "10%", lg: "20%", '2xl': "30%" }}
         left={{ base:"5%", lg: "15%" }}
         w={{ base: "90%", lg: "50%" }}
         direction="column"
         gap={5}
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transitionDuration="0.5s"
       >
         <Heading
           as="h1"

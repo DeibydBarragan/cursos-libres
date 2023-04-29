@@ -1,6 +1,7 @@
 import { Course } from "@/components/context/interfaces"
 import { Button, Card, CardBody, CardFooter, Divider, Flex, Heading, Image, Stack, Text } from "@chakra-ui/react"
 import Link from "next/link"
+import { motion } from 'framer-motion'
 
  type Props = {
   course: Course
@@ -9,14 +10,14 @@ import Link from "next/link"
 export default function CourseCard({course}: Props) {
   return (
     <Card
+      as={motion.div}
       maxW='sm'
       shadow="2xl"
       border='1px'
       borderColor='gray.200'
-      transition='all 0.2s ease-in-out'
-      _hover={{
-        transform: "translate(0, -7px)",
-      }}
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ y: -7 }}
     >
       <Link
         href={`/curso/${course.id}`}

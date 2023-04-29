@@ -2,6 +2,7 @@ import { Box, Card, Heading, SimpleGrid } from "@chakra-ui/react";
 import { useContext } from "react";
 import { coursesContext } from "../context/coursesContext";
 import CourseCard from "./courseCard/courseCard";
+import { motion } from 'framer-motion'
 
 export default function CoursesSection() {
   const { courses } = useContext(coursesContext)
@@ -16,8 +17,10 @@ export default function CoursesSection() {
       my={10}
     >
       <Heading
-        as="h2"
+        as={motion.h2}
         color="green.800"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
       >
         Cursos libres
       </Heading>
