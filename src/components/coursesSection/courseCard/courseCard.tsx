@@ -12,7 +12,7 @@ export default function CourseCard({course}: Props) {
     <Card
       as={motion.div}
       maxW='sm'
-      shadow="2xl"
+      shadow="xl"
       border='1px'
       borderColor='gray.200'
       initial={{ opacity: 0, y: 60 }}
