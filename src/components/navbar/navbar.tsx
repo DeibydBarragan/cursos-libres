@@ -3,9 +3,33 @@ import { ROUTES } from './links.data'
 import { BiMenu } from 'react-icons/bi'
 import NavLink from './navLink'
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
+import { useEffect, useContext } from 'react';
+import { ScrollingContext } from '../context/scrollingContext';
+import { scroller } from 'react-scroll'
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useBoolean(false)
+  const route = useRouter()
+  const { scroll, setScroll } = useContext(ScrollingContext)
+
+  useEffect(() => {
+    if (scroll && route.pathname === '/') {
+      scroller.scrollTo(scroll, {
+        smooth: true,
+        duration: 500,
+        offset: -110
+      })
+    }
+  }, [scroll, route.pathname])
+
+  const handleClickLink = ( scrollElement:string ) => {
+    setShowMenu.off()
+    if (route.pathname !== '/') {
+      route.push('/')
+      setScroll(scrollElement)
+    }
+  }
 
   return (
     <Box
@@ -50,6 +74,7 @@ export default function Navbar() {
               <NavLink
                 key={index}
                 to={route.path}
+                onClick={() => handleClickLink(route.path)}
               >
                 {route.name}
               </NavLink>
@@ -97,8 +122,9 @@ export default function Navbar() {
             {
               ROUTES.map((route, index) => (
                 <NavLink
-                key={index}
-                to={route.path}
+                  key={index}
+                  to={route.path}
+                  onClick={() => handleClickLink(route.path)}
                 >
                   {route.name}
                 </NavLink>

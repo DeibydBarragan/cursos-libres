@@ -1,13 +1,16 @@
 import { Course } from "@/components/context/interfaces"
-import { Button, Card, CardBody, CardFooter, Divider, Flex, Heading, Image, Stack, Text } from "@chakra-ui/react"
+import { Button, Card, CardBody, CardFooter, Divider, Flex, Heading, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Stack, Text, useDisclosure } from "@chakra-ui/react"
 import Link from "next/link"
 import { motion } from 'framer-motion'
+import InscriptionForm from "@/components/forms/inscriptionForm"
 
  type Props = {
   course: Course
 }
 
 export default function CourseCard({course}: Props) {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
   return (
     <Card
       as={motion.div}
@@ -62,10 +65,28 @@ export default function CourseCard({course}: Props) {
         <Button 
           colorScheme='green'
           w='full'
+          onClick={onOpen}
         >
           Inscribirme
         </Button>
       </CardFooter>
+      
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        size='lg'
+        
+      >
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>
+            <ModalCloseButton/>
+          </ModalHeader>
+          <ModalBody>
+            <InscriptionForm defaultCourse={course}/>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </Card>
   )
 }

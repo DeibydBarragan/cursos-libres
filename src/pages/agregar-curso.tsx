@@ -1,10 +1,11 @@
 import Layout from '@/components/layout/layout'
-import { Box, Button, Flex, FormControl, FormLabel, Heading, Input, InputGroup, InputLeftElement, Select, Textarea } from "@chakra-ui/react"
+import { Box, Button, Flex, FormControl, FormLabel, Heading, Input, InputGroup, InputLeftElement, Select, SimpleGrid, Textarea } from "@chakra-ui/react"
 import { NextPage } from 'next'
 import React from 'react'
 import { FaSchool } from 'react-icons/fa'
 import { FiAtSign } from "react-icons/fi"
 import { motion } from 'framer-motion'
+import InputDate from '@/components/forms/inputDate/inputDate'
 
 const AgregarCurso:NextPage = () => {
   return (
@@ -82,7 +83,27 @@ const AgregarCurso:NextPage = () => {
                 isRequired
               />
             </InputGroup>
-        
+
+            <SimpleGrid
+              columns={{
+                base: 1,
+                md: 2
+              }}
+              spacing={7}
+            >
+              {/**Inscription date */}
+              <InputDate label="Inicio de inscripciones"/>
+
+              {/**End inscription date */}
+              <InputDate label="Fin de inscripciones"/>
+
+              {/**Start date */}
+              <InputDate label="Inicio del curso"/>
+
+              {/**End date */}
+              <InputDate label="Fin del curso"/>
+    
+            </SimpleGrid>
           </Flex>
           <Button
             colorScheme="green"

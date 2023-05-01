@@ -1,16 +1,17 @@
 import { coursesContext } from "@/components/context/coursesContext"
 import { Course } from "@/components/context/interfaces";
 import Layout from "@/components/layout/layout"
-import { Button, Flex, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react"
+import { Button, Flex, Grid, GridItem, Heading, Image, Modal, ModalHeader, ModalCloseButton, ModalContent, ModalOverlay, ModalBody, Text, useDisclosure } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import { useContext, useState, useEffect } from 'react';
 import { motion } from "framer-motion";
+import InscriptionForm from "@/components/forms/inscriptionForm";
 
 type Props = {}
 
 export default function CourseView ({}: Props) {
   const { id } = useRouter().query
-
+  const { isOpen, onOpen, onClose } = useDisclosure()
   const { courses } = useContext(coursesContext)
   const [course, setCourse] = useState<Course | null>(null)
 
@@ -25,7 +26,7 @@ export default function CourseView ({}: Props) {
 
   return (
     <Layout>
-      <Grid
+      {course && (<Grid
         as={motion.section}
         w={{ base: "90%", lg: "70%" }}
         mx="auto"
@@ -121,9 +122,26 @@ export default function CourseView ({}: Props) {
           <Button
             colorScheme='green'
             mt={5}
+            onClick={onOpen}
           >
             Inscribirse al curso
           </Button>
+          <Modal
+            isOpen={isOpen}
+            onClose={onClose}
+            size='lg'
+            
+          >
+            <ModalOverlay />
+            <ModalContent>
+              <ModalHeader>
+                <ModalCloseButton/>
+              </ModalHeader>
+              <ModalBody>
+                <InscriptionForm defaultCourse={course}/>
+              </ModalBody>
+            </ModalContent>
+          </Modal>
         </GridItem>
         {/**Descripción */}
         <GridItem colSpan={4}>
@@ -142,7 +160,7 @@ export default function CourseView ({}: Props) {
             {course?.description}
           </Text>
         </GridItem>
-      </Grid>
+      </Grid>)}
     </Layout>
   )
 }
