@@ -1,20 +1,23 @@
 import InscriptionForm from "@/components/forms/inscriptionForm"
-import { Box } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react"
 import { motion } from 'framer-motion'
 
 export default function InscriptionSection() {
 
   return (
-    <Box
+    <Flex
       as={motion.section}
-      id="inscription"
       minH="90vh"
       w={{ base: "90%", lg: "40%", '2xl': "30%" }}
       mx="auto"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
+      flexDir="column"
+      justifyContent="center"
     >
-      <InscriptionForm/>
-    </Box>
+      <div id="inscription">
+        <InscriptionForm/>
+      </div>
+    </Flex>
   )
 }

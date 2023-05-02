@@ -1,16 +1,18 @@
 import { Flex, Image, Link } from '@chakra-ui/react'
-import React from 'react'
+import {motion} from 'framer-motion';
 
 export default function Footer() {
   return (
     <Flex
-      as="footer"
+      as={motion.footer}
       w="full"
       h={20}
       mt={10}
       bg="green.600"
       justifyContent="center"
       alignContent="center"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
     >
       <Link
         href='/'

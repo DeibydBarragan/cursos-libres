@@ -13,6 +13,8 @@ export default function CourseCard({course}: Props) {
 
   return (
     <Card
+      display="flex"
+      justifyContent="space-between"
       as={motion.div}
       maxW='sm'
       shadow="xl"
@@ -58,10 +60,10 @@ export default function CourseCard({course}: Props) {
           </Stack>
         </CardBody>
       </Link>
-      <Divider
-        borderColor='gray.400'
-      />
-      <CardFooter>
+      <CardFooter
+        borderTop="1px"
+        borderColor="gray.300"
+      >
         <Button 
           colorScheme='green'
           w='full'
@@ -75,7 +77,6 @@ export default function CourseCard({course}: Props) {
         isOpen={isOpen}
         onClose={onClose}
         size='lg'
-        
       >
         <ModalOverlay />
         <ModalContent>

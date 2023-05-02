@@ -69,8 +69,8 @@ export default function CourseView ({}: Props) {
           as={motion.div}
           rowSpan={2}
           colSpan={2}
-          initial={{ y: -100 }}
-          animate={{ y: 0 }} 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }} 
         >
           {/**Register date */}
           <Text

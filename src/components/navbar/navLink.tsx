@@ -21,7 +21,6 @@ export default function NavLink({to, children, onClick}: Props) {
         fontSize="md"
         _hover={{
           color: "green.700",
-          textDecoration: "none",
           cursor: "pointer"
         }}
       >
