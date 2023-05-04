@@ -15,7 +15,7 @@ export default function Layout({children}: Props) {
         <Navbar />
 
         {/* Main Content */}
-        <Flex flexDir="column" width="full">
+        <Flex flexDir="column" width="full" minH="full" flexGrow="1">
           {children}
           <Footer/>
         </Flex>

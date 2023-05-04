@@ -6,8 +6,8 @@ export default function Footer() {
     <Flex
       as={motion.footer}
       w="full"
-      h={20}
-      mt={10}
+      h="10vh"
+      mt="auto"
       bg="green.600"
       justifyContent="center"
       alignContent="center"

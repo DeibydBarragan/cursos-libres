@@ -25,8 +25,9 @@ export default function CourseView ({}: Props) {
   }, [courses, id])
 
   return (
-    <Layout>
-      {course && (<Grid
+      course && (
+      <Layout>
+      <Grid
         as={motion.section}
         w={{ base: "90%", lg: "70%" }}
         mx="auto"
@@ -38,6 +39,7 @@ export default function CourseView ({}: Props) {
         gap={4}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
+        minH="80vh"
       >
         {/**Title */}
         <GridItem colSpan={4}>
@@ -160,7 +162,8 @@ export default function CourseView ({}: Props) {
             {course?.description}
           </Text>
         </GridItem>
-      </Grid>)}
-    </Layout>
+      </Grid>
+      </Layout>
+      )
   )
 }
