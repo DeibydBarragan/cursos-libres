@@ -39,7 +39,7 @@ export default function CourseCard({course}: Props) {
               alt={course.name}
               objectFit='cover'
               borderRadius='lg'
-              maxH='full'
+              h='full'
             />
           </Flex>
           <Stack mt='6' spacing='3'>
