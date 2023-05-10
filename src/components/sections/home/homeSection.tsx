@@ -44,12 +44,12 @@ export default function HomeSection () {
           ¿Qué es un curso libre en la Universidad Nacional de Colombia?
         </Heading>
         <Text 
-          fontSize="xl"
+          fontSize="lg"
           color="white"
           fontWeight={700}
           textShadow="2px 2px 8px #000000"
         >
-          Lorem ipsum dolor sit amet consectetur. Ultrices tellus neque amet scelerisque morbi pellentesque eget. Id duis volutpat ipsum sed. Nunc nulla tristique aenean malesuada facilisi luctus. Tempor sit etiam faucibus libero maecenas.
+          La Universidad Nacional de Colombia, sede Bogotá, desde el área de Bienestar Universitario proporciona diversos cursos libres en deporte y otras áreas con el propósito de ofrecer una formación integral que incluya hábitos saludables, uso adecuado del tiempo libre y la integración de la comunidad universitaria.
         </Text>
         <Flex
           gap={5}

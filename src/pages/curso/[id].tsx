@@ -6,6 +6,7 @@ import { useRouter } from "next/router"
 import { useContext, useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import InscriptionForm from "@/components/forms/inscriptionForm";
+import { RiUserAddLine } from "react-icons/ri";
 
 type Props = {}
 
@@ -28,7 +29,7 @@ export default function CourseView ({}: Props) {
       course && (
       <Layout>
       <Grid
-        as={motion.section}
+        as="section"
         w={{ base: "90%", lg: "70%" }}
         mx="auto"
         mt={{ base: 5, lg: 10 }}
@@ -37,21 +38,25 @@ export default function CourseView ({}: Props) {
         flexDir="column"
         display={{ base: "flex", md: "grid"}}
         gap={4}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
         minH="80vh"
       >
         {/**Title */}
         <GridItem colSpan={4}>
           <Heading
-            as="h2"
+            as={motion.h2}
             color="green.800"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
           >
             {course?.name}
           </Heading>
         </GridItem>
         {/**Photo */}
-        <GridItem colSpan={4}>
+        <GridItem colSpan={4}
+          as={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
           <Flex
             justifyContent="center"
             w="full"
@@ -71,8 +76,8 @@ export default function CourseView ({}: Props) {
           as={motion.div}
           rowSpan={2}
           colSpan={2}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }} 
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }} 
         >
           {/**Register date */}
           <Text
@@ -122,6 +127,7 @@ export default function CourseView ({}: Props) {
           </Text>
           {/**Inscription button */}
           <Button
+            rightIcon={<RiUserAddLine size={20}/>}
             colorScheme='green'
             mt={5}
             onClick={onOpen}
@@ -146,7 +152,11 @@ export default function CourseView ({}: Props) {
           </Modal>
         </GridItem>
         {/**Descripción */}
-        <GridItem colSpan={4}>
+        <GridItem colSpan={4}
+          as={motion.div}
+          initial={{ y: 30 }}
+          animate={{ x: 0 }}
+        >
           <Text
             as='h3'
             fontSize='4vh'

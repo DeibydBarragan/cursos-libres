@@ -12,7 +12,7 @@ export default function InfoCard({info}: Props) {
     <Card
       shadow="lg"
       as={motion.div}
-      initial={{ y: 50, opacity:0 }}
+      initial={{ y: 30, opacity:0 }}
       whileInView={{ y: 0, opacity: 1 }}
       border="1px"
       borderColor="green.300"

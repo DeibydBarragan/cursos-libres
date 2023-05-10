@@ -5,12 +5,12 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=''/>
-      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin  = "" />
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet"/>
       <body
         style={{
           backgroundColor: "#f5f5f5",
-          fontFamily: "Raleway, sans-serif"
+          fontFamily: "Source Sans Pro, sans-serif"
         }}
       >
         <Main />

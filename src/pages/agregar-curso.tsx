@@ -1,9 +1,11 @@
 import Layout from '@/components/layout/layout'
-import { Box, Button, Flex, FormControl, FormLabel, Heading, Input, InputGroup, InputLeftElement, Select, SimpleGrid, Textarea } from "@chakra-ui/react"
+import { Box, Button, Flex, FormControl, FormLabel, Heading, Input, InputGroup, InputLeftElement, SimpleGrid, Textarea } from "@chakra-ui/react"
 import { NextPage } from 'next'
 import React from 'react'
 import { FaSchool } from 'react-icons/fa'
 import { FiAtSign } from "react-icons/fi"
+import { HiOutlinePlus } from "react-icons/hi"
+import { BsFileEarmarkImage } from "react-icons/bs"
 import { motion } from 'framer-motion'
 import InputDate from '@/components/forms/inputDate/inputDate'
 
@@ -51,6 +53,24 @@ const AgregarCurso:NextPage = () => {
               colorScheme="green" 
               isRequired
               placeholder="¿De qué trata tu curso?"
+            />
+
+            {/**Photo */}
+            <Button
+              leftIcon={<BsFileEarmarkImage/>}
+              color="gray.500"
+              variant="outline"
+              fontWeight={500}
+              justifyContent ="start"
+            >
+              Foto de tu curso
+            </Button>
+            <Input
+              focusBorderColor="green.400"
+              colorScheme="green"
+              type="file"
+              isRequired
+              display="none"
             />
           
             {/**School */}
@@ -106,6 +126,7 @@ const AgregarCurso:NextPage = () => {
             </SimpleGrid>
           </Flex>
           <Button
+            rightIcon={<HiOutlinePlus size={20}/>}
             colorScheme="green"
             type="submit"
           >

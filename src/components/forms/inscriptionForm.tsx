@@ -1,6 +1,6 @@
 import { useContext, useState } from "react"
 import { FaSchool } from "react-icons/fa"
-import { FiAtSign } from "react-icons/fi"
+import { FiAtSign, FiSend } from "react-icons/fi"
 import { Button, Flex, FormControl, FormLabel, Heading, Input, InputGroup, InputLeftElement, Select } from "@chakra-ui/react"
 import { coursesContext } from "@/components/context/coursesContext"
 import { Course } from "../context/interfaces"
@@ -110,6 +110,7 @@ export default function InscriptionForm({defaultCourse}: Props) {
     
       </Flex>
       <Button
+        rightIcon={<FiSend size={18}/>}
         colorScheme="green"
         type="submit"
       >

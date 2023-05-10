@@ -11,7 +11,7 @@ export default function InfoSection({}: Props) {
     <Flex
     as="section"
     minH="90vh"
-    w={{ base: "90%", lg: "85%", '2xl': "80%" }}
+    w={{ base: "90%", lg: "80%", '2xl': "70%" }}
     id="info"
     mx="auto"
     flexDir="column"
@@ -26,17 +26,20 @@ export default function InfoSection({}: Props) {
         >
         Áreas de Bienestar
       </Heading>
-      <SimpleGrid
-        columns={{ base: 1, md: 2, lg: 3, xl: 5 }}
-        spacing={5}
+      <Box
+        display={{ base:"grid", xl: "flex" }}
+        flexDir="row"
+        gridTemplateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)", xl: "repeat(4, 1fr)" }}
+        gap={5}
         mt={8}
+        justifyContent="center"
       >
         {
           infoAreas.map((info, index) => (
             <InfoCard key={index} info={info}/>
           ))
         }
-      </SimpleGrid>
+      </Box>
     </Flex>
   )
 }

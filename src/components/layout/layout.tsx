@@ -8,18 +8,16 @@ type Props = {
 
 export default function Layout({children}: Props) {
   return (
-    <>
-      <VStack role="main" spacing={0}>
+    <VStack role="main" spacing={0} >
 
-        {/* Navbar */}
-        <Navbar />
+      {/* Navbar */}
+      <Navbar />
 
-        {/* Main Content */}
-        <Flex flexDir="column" width="full" minH="full" flexGrow="1">
-          {children}
-          <Footer/>
-        </Flex>
-      </VStack>
-    </>
+      {/* Main Content */}
+      <Flex flexDir="column" minH="full" gap={16} w="full">
+        {children}
+        <Footer/>
+      </Flex>
+    </VStack>
   )
 }

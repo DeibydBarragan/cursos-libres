@@ -7,7 +7,6 @@ export default function Footer() {
       as={motion.footer}
       w="full"
       h="10vh"
-      mt="auto"
       bg="green.600"
       justifyContent="center"
       alignContent="center"
