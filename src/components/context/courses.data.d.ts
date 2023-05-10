@@ -29,7 +29,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/05/31',
         startDate: '2020/06/01',
         endDate: '2020/06/30',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png'
+        image: 'https://cdn.pixabay.com/photo/2014/09/21/15/37/gym-455164_1280.jpg'
     },
     {
         id: 4,
