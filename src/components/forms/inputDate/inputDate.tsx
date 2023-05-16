@@ -16,6 +16,7 @@ export default function InputDate({label}: Props) {
         focusBorderColor="green.400"
         type="date"
         mt={2}
+        aria-label={label}
       />
     </Box>
   )
