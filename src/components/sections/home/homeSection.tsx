@@ -1,8 +1,17 @@
-import NavLink from '@/components/navbar/navLink'
-import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+import { scroller } from 'react-scroll'
 
 export default function HomeSection () {
+  const handleClickBtn = (to:string) => {
+    scroller.scrollTo(to, {
+      smooth: true,
+      duration: 500,
+      offset: -110
+    })
+  }
+
   return (
     <Box
       as={motion.section}
@@ -10,29 +19,34 @@ export default function HomeSection () {
       h="90vh"
       position="relative"
       backgroundColor="black"
+      display="flex"
+      alignItems="center"
+      pl={{
+        base: "2%", lg: "10%", xl: "15%"
+      }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1}}
     >
       <Image
         src="/images/fondo.jpg"
         alt="Fondo de la seccion de inicio"
-        h="100%"
-        w="full"
-        objectFit="cover"
-        filter="brightness(70%)"
-        brightness="50%"
+        priority={true}
+        fill={true}
+        sizes="100%, 100%"
+        style={{
+          objectFit: 'cover',
+          filter: 'brightness(0.5)',
+        }}
       />
       <Flex
         as={motion.div}
-        position="absolute"
-        top={{ base: "10%", lg: "20%", '2xl': "30%" }}
-        left={{ base:"5%", lg: "15%" }}
         w={{ base: "90%", lg: "50%" }}
         direction="column"
         gap={5}
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transitionDuration="0.5s"
+        zIndex={1}
       >
         <Heading
           as="h1"
@@ -54,26 +68,20 @@ export default function HomeSection () {
         <Flex
           gap={5}
         >
-          <NavLink
-            to='courses'
+          <Button
+            colorScheme="green"
+            shadow="md"
+            onClick={() => handleClickBtn('courses')}
           >
-            <Button
-              colorScheme="green"
-              shadow="md"
-            >
-              Ver cursos
-            </Button>
-          </NavLink>
-          <NavLink
-            to='inscription'
+            Ver cursos
+          </Button>
+          <Button
+            colorScheme="green"
+            shadow="md"
+            onClick={() => handleClickBtn('inscription')}
           >
-            <Button
-              colorScheme="green"
-              shadow="md"
-            >
-              Inscribirse a un curso
-            </Button>
-          </NavLink>
+            Inscribirse a un curso
+          </Button>
         </Flex>
       </Flex>
     </Box>
