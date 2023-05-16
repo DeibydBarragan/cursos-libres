@@ -1,8 +1,9 @@
 import { Course } from "@/components/context/interfaces"
-import { Button, Card, CardBody, CardFooter, Divider, Flex, Heading, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Stack, Text, useDisclosure } from "@chakra-ui/react"
+import { Button, Card, CardBody, CardFooter, Flex, Heading, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Stack, Text, useDisclosure } from "@chakra-ui/react"
 import Link from "next/link"
 import { motion } from 'framer-motion'
 import InscriptionForm from "@/components/forms/inscriptionForm"
+import Image from "next/image"
 
  type Props = {
   course: Course
@@ -15,6 +16,7 @@ export default function CourseCard({course}: Props) {
     <Card
       display="flex"
       justifyContent="space-between"
+      borderRadius={12}
       as={motion.div}
       maxW='sm'
       shadow="xl"
@@ -32,14 +34,17 @@ export default function CourseCard({course}: Props) {
           <Flex
             justifyContent='center'
             w='full'
-            h={28}
           >
             <Image
-              src={course.image}
+              src={`/images/courses/${course.image}.webp`}
               alt={course.name}
-              objectFit='cover'
-              borderRadius='lg'
-              maxH='full'
+              sizes="100%"
+              width={200}
+              height={200}
+              style={{
+                borderRadius: '5%',
+                objectFit: 'cover',
+              }}
             />
           </Flex>
           <Stack mt='6' spacing='3'>

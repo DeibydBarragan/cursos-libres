@@ -9,13 +9,14 @@ type Props = {}
 export default function InfoSection({}: Props) {
   return (
     <Flex
-    as="section"
-    minH="90vh"
-    w={{ base: "90%", lg: "80%", '2xl': "70%" }}
-    id="info"
-    mx="auto"
-    flexDir="column"
-    my={10}
+      as="section"
+      minH="90vh"
+      w={{ base: "90%", lg: "80%", '2xl': "70%" }}
+      id="info"
+      mx="auto"
+      flexDir="column"
+      justifyContent="center"
+      pb={20}
     >
       <Heading
         as={motion.h2}

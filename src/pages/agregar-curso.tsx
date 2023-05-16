@@ -8,10 +8,14 @@ import { HiOutlinePlus } from "react-icons/hi"
 import { BsFileEarmarkImage } from "react-icons/bs"
 import { motion } from 'framer-motion'
 import InputDate from '@/components/forms/inputDate/inputDate'
+import Head from 'next/head'
 
 const AgregarCurso:NextPage = () => {
   return (
     <Layout>
+      <Head>
+        <title>Agregar curso</title>
+      </Head>
       <Box
         as={motion.section}
         minH="90vh"

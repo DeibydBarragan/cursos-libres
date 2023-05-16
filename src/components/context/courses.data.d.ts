@@ -9,7 +9,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/01/31',
         startDate: '2020/02/01',
         endDate: '2020/02/29',
-        image: 'https://cdn.pixabay.com/photo/2016/03/27/23/00/weight-lifting-1284616_1280.jpg'
+        image: 'multifuerza'
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/03/31',
         startDate: '2020/04/01',
         endDate: '2020/04/30',
-        image: 'https://cdn.pixabay.com/photo/2015/09/25/10/45/fitness-957115_1280.jpg'
+        image: 'cardio'
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/05/31',
         startDate: '2020/06/01',
         endDate: '2020/06/30',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png'
+        image: 'spinning'
     },
     {
         id: 4,
@@ -39,7 +39,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/05/31',
         startDate: '2020/06/01',
         endDate: '2020/06/30',
-        image: "https://cdn.pixabay.com/photo/2014/06/05/21/22/aikido-362954_1280.jpg"
+        image: "aikido"
     },
     {
         id: 5,
@@ -49,7 +49,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/01/31',
         startDate: '2020/02/01',
         endDate: '2020/02/29',
-        image: 'https://images.unsplash.com/photo-1515025617920-e1e674b5033c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80'
+        image: 'judo'
     },
     {
         id: 6,
@@ -59,7 +59,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/03/31',
         startDate: '2020/04/01',
         endDate: '2020/04/30',
-        image: 'https://images.unsplash.com/photo-1576149146095-caa19d4de102?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80'
+        image: 'jiujitsu'
     },
     {
         id: 7,
@@ -69,7 +69,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/05/31',
         startDate: '2020/06/01',
         endDate: '2020/06/30',
-        image: 'https://cdn.pixabay.com/photo/2015/08/18/14/15/black-belt-894190_1280.jpg'
+        image: 'karate'
     },
     {
         id: 8,
@@ -79,7 +79,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/05/31',
         startDate: '2020/06/01',
         endDate: '2020/06/30',
-        image: "https://cdn.pixabay.com/photo/2013/02/05/19/22/taekwondo-78119_1280.jpg"
+        image: "taekwondo"
     },
     {
         id: 9,
@@ -89,7 +89,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/05/31',
         startDate: '2020/06/01',
         endDate: '2020/06/30',
-        image: "https://cdn.pixabay.com/photo/2018/04/07/07/51/rock-climbing-wall-3297942_1280.jpg"
+        image: "escalada"
     },
     {
         id: 10,
@@ -99,7 +99,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/05/31',
         startDate: '2020/06/01',
         endDate: '2020/06/30',
-        image: "https://cdn.pixabay.com/photo/2017/08/02/20/24/woman-2573216_1280.jpg"
+        image: "yoga"
     },
     {
         id: 11,
@@ -109,7 +109,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/05/31',
         startDate: '2020/06/01',
         endDate: '2020/06/30',
-        image: "https://cdn.pixabay.com/photo/2016/05/31/23/21/table-tennis-1428052_1280.jpg"
+        image: "tennis"
     },
     {
         id: 12,
@@ -119,7 +119,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/05/31',
         startDate: '2020/06/01',
         endDate: '2020/06/30',
-        image: "https://cdn.pixabay.com/photo/2023/04/17/10/31/tennis-7932067_1280.jpg"
+        image: "tennis2"
     },
     {
         id: 13,
@@ -129,7 +129,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/05/31',
         startDate: '2020/06/01',
         endDate: '2020/06/30',
-        image: "https://cdn.pixabay.com/photo/2016/11/19/13/49/fencing-1839325_1280.jpg"
+        image: "esgrima"
     },
     {
         id: 14,
@@ -139,7 +139,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/05/31',
         startDate: '2020/06/01',
         endDate: '2020/06/30',
-        image: "https://cdn.pixabay.com/photo/2017/07/01/08/15/inline-speed-skating-2460832_1280.jpg"
+        image: "patinaje"
     },
     {
         id: 15,
@@ -149,7 +149,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/05/31',
         startDate: '2020/06/01',
         endDate: '2020/06/30',
-        image: "https://cdn.pixabay.com/photo/2014/12/10/02/54/basketball-562615_1280.jpg"
+        image: "baloncesto"
     },
     {
         id: 16,
@@ -159,7 +159,7 @@ export const coursesData: Course[] = [
         endRegDate: '2020/05/31',
         startDate: '2020/06/01',
         endDate: '2020/06/30',
-        image: "https://cdn.pixabay.com/photo/2015/08/26/09/26/sport-908267_1280.jpg"
+        image: "volley"
     },
     {
         id: 17,
@@ -169,6 +169,6 @@ export const coursesData: Course[] = [
         endRegDate: '2020/05/31',
         startDate: '2020/06/01',
         endDate: '2020/06/30',
-        image: "https://cdn.pixabay.com/photo/2016/02/22/09/44/chess-1215079_1280.jpg"
+        image: "ajedrez"
     }
 ];

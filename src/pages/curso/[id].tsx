@@ -1,12 +1,13 @@
 import { coursesContext } from "@/components/context/coursesContext"
 import { Course } from "@/components/context/interfaces";
 import Layout from "@/components/layout/layout"
-import { Button, Flex, Grid, GridItem, Heading, Image, Modal, ModalHeader, ModalCloseButton, ModalContent, ModalOverlay, ModalBody, Text, useDisclosure } from "@chakra-ui/react"
+import { Button, Flex, Grid, GridItem, Heading, Modal, ModalHeader, ModalCloseButton, ModalContent, ModalOverlay, ModalBody, Text, useDisclosure } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import { useContext, useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import InscriptionForm from "@/components/forms/inscriptionForm";
 import { RiUserAddLine } from "react-icons/ri";
+import Image from "next/image";
 
 type Props = {}
 
@@ -58,16 +59,20 @@ export default function CourseView ({}: Props) {
           animate={{ opacity: 1 }}
         >
           <Flex
-            justifyContent="center"
+            justifyContent="start"
             w="full"
             h={64}
           >
             <Image
-              src={course?.image}
+              src={`/images/courses/${course?.image}.webp`}
               alt={course?.name}
-              objectFit='cover'
-              borderRadius='lg'
-              maxH="full"
+              width={400}
+              height={400}
+              sizes="100%"
+              style={{
+                borderRadius: '5%',
+                objectFit: 'cover',
+              }}
             />
           </Flex>
         </GridItem>

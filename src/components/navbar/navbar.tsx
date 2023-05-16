@@ -1,4 +1,4 @@
-import { Box, Drawer, DrawerCloseButton, DrawerContent, DrawerOverlay, Flex, IconButton, Image, Link, useBoolean } from '@chakra-ui/react'
+import { Box, Drawer, DrawerCloseButton, DrawerContent, DrawerOverlay, Flex, IconButton, Link, useBoolean } from '@chakra-ui/react'
 import { ROUTES } from './links.data'
 import { BiMenu } from 'react-icons/bi'
 import NavLink from './navLink'
@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useContext } from 'react';
 import { ScrollingContext } from '../context/scrollingContext';
 import { scroller } from 'react-scroll'
+import Image from 'next/image';
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useBoolean(false)
@@ -59,7 +60,9 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="Logo"
-            height={24}
+            height={130}
+            width={130}
+            priority={true}
           />
         </Link>
         <Box

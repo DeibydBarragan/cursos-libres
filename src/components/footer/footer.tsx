@@ -6,7 +6,7 @@ export default function Footer() {
     <Flex
       as={motion.footer}
       w="full"
-      h="10vh"
+      h="13vh"
       bg="green.600"
       justifyContent="center"
       alignContent="center"
@@ -15,11 +15,12 @@ export default function Footer() {
     >
       <Link
         href='/'
+        pt={3}
       >
         <Image
-          src="/logo.png"
+          src="/footer.png"
           alt="Logo"
-          height="100%"
+          height="10vh"
         />
       </Link>
     </Flex>
