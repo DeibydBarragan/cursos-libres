@@ -1,5 +1,6 @@
-import { Flex, Image, Link } from '@chakra-ui/react'
+import { Flex, Link } from '@chakra-ui/react'
 import {motion} from 'framer-motion';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -20,7 +21,8 @@ export default function Footer() {
         <Image
           src="/footer.webp"
           alt="Logo"
-          height="10vh"
+          height={40}
+          width={120}
         />
       </Link>
     </Flex>

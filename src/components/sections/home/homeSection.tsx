@@ -22,7 +22,7 @@ export default function HomeSection () {
       display="flex"
       alignItems="center"
       pl={{
-        base: "2%", lg: "10%", xl: "15%"
+        base: "4%", lg: "10%", xl: "15%"
       }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1}}
@@ -43,6 +43,7 @@ export default function HomeSection () {
         w={{ base: "90%", lg: "50%" }}
         direction="column"
         gap={5}
+        mb={10}
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transitionDuration="0.5s"
