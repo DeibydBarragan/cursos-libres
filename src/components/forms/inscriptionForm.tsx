@@ -19,6 +19,7 @@ export default function InscriptionForm({defaultCourse}: Props) {
       gap={5}
       as="form"
       mb="5"
+      aria-label="Formulario de inscripción"
     >
       <Heading
         as="h2"
@@ -36,6 +37,7 @@ export default function InscriptionForm({defaultCourse}: Props) {
           type='text'
           colorScheme="green"
           isRequired
+          aria-label="Tus nombres"
         />
 
         {/**Lastnames */}
@@ -44,6 +46,7 @@ export default function InscriptionForm({defaultCourse}: Props) {
           type='text'
           colorScheme="green"
           isRequired
+          aria-label="Tus apellidos"
         />
       
         {/**Course */}
@@ -52,6 +55,7 @@ export default function InscriptionForm({defaultCourse}: Props) {
             focusBorderColor="green.400"
             _placeholder={{ opacity: 0.4 }}
             isRequired
+            aria-label="Selecciona un curso"
             {...defaultCourse 
               ? {placeholder: defaultCourse.name,
                   defaultValue: defaultCourse.id,
@@ -62,7 +66,7 @@ export default function InscriptionForm({defaultCourse}: Props) {
           >
             {
               courses.map((course, index) => (
-                <option value={course.id} key={index}>
+                <option value={course.id} key={index} aria-label={course.name}>
                   {course.name}
                 </option>
               ))
@@ -82,6 +86,7 @@ export default function InscriptionForm({defaultCourse}: Props) {
             placeholder="Facultad a la que perteneces"
             colorScheme="green"
             isRequired
+            aria-label="Facultad a la que perteneces"
           />
         </InputGroup>
     
@@ -97,6 +102,7 @@ export default function InscriptionForm({defaultCourse}: Props) {
             placeholder="Correo electrónico institucional"
             colorScheme="green"
             isRequired
+            aria-label="Correo electrónico institucional"
           />
         </InputGroup>
     
@@ -106,6 +112,7 @@ export default function InscriptionForm({defaultCourse}: Props) {
           placeholder="Carrera que estudias"
           colorScheme="green"
           isRequired
+          aria-label="Carrera que estudias"
         />
     
       </Flex>
@@ -113,6 +120,7 @@ export default function InscriptionForm({defaultCourse}: Props) {
         rightIcon={<FiSend size={18}/>}
         colorScheme="green"
         type="submit"
+        aria-label="Inscribirse"
       >
         Inscribirse
       </Button>

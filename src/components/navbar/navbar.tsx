@@ -58,7 +58,7 @@ export default function Navbar() {
           href='/'
         >
           <Image
-            src="/logo.png"
+            src="/logo.webp"
             alt="Logo"
             height={130}
             width={130}

@@ -18,7 +18,7 @@ export default function Footer() {
         pt={3}
       >
         <Image
-          src="/footer.png"
+          src="/footer.webp"
           alt="Logo"
           height="10vh"
         />

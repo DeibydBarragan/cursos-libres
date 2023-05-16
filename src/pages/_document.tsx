@@ -9,7 +9,7 @@ export default function Document() {
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin  = "" />
       <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet"/>
-      <link rel="icon" href="/icon.png" />
+      <link rel="icon" href="/icon.webp" />
       <body
         style={{
           backgroundColor: "#f5f5f5",

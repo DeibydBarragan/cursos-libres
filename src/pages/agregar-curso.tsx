@@ -31,6 +31,7 @@ const AgregarCurso:NextPage = () => {
           gap={5}
           as="form"
           minH="90vh"
+          aria-label='Formulario para agregar un curso'
         >
           <Heading
             as="h2"
@@ -48,7 +49,8 @@ const AgregarCurso:NextPage = () => {
               type='text' variant="outline" 
               colorScheme="green" 
               isRequired
-              placeholder='Nombre del curso'  
+              placeholder='Nombre del curso'
+              aria-label='Nombre del curso' 
             />
 
             {/**Description */}
@@ -57,6 +59,7 @@ const AgregarCurso:NextPage = () => {
               colorScheme="green" 
               isRequired
               placeholder="¿De qué trata tu curso?"
+              aria-label='Descripción del curso'
             />
 
             {/**Photo */}
@@ -75,6 +78,7 @@ const AgregarCurso:NextPage = () => {
               type="file"
               isRequired
               display="none"
+              aria-label="Foto del curso"
             />
           
             {/**School */}
@@ -90,6 +94,7 @@ const AgregarCurso:NextPage = () => {
                 type='text' colorScheme="green" 
                 isRequired
                 placeholder="Facultad a la que perteneces"  
+                aria-label='Facultad a la que perteneces'
               />
             </InputGroup>
         
@@ -105,6 +110,7 @@ const AgregarCurso:NextPage = () => {
                 placeholder="Correo electrónico institucional"
                 colorScheme="green"
                 isRequired
+                aria-label='Correo electrónico institucional'
               />
             </InputGroup>
 
@@ -133,6 +139,7 @@ const AgregarCurso:NextPage = () => {
             rightIcon={<HiOutlinePlus size={20}/>}
             colorScheme="green"
             type="submit"
+            aria-label='Agregar curso'
           >
             Agregar curso
           </Button>
