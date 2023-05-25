@@ -22,7 +22,7 @@ export default function CourseCard({course}: Props) {
       shadow="xl"
       border='1px'
       borderColor='gray.200'
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ y: -7 }}
       exit={{ opacity: 0, y: 20 }}

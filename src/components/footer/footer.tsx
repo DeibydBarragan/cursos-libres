@@ -10,7 +10,7 @@ export default function Footer() {
       h="13vh"
       bg="green.600"
       justifyContent="center"
-      alignContent="center"
+      alignItems="center"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
     >
