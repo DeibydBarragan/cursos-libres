@@ -1,5 +1,5 @@
-# MY PORTFOLIO
-This is my portfolio to show my skills, experience and projects
+# CURSOS LIBRES UN
+This is a landing page to show different free courses and information of a college
 
 ## Prerequisite
 You have to install these tools
